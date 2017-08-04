@@ -84,15 +84,15 @@ discountName = 黄焖鸡，凉皮
   var print = [];
   printIfo.push(`============= 订餐明细 =============`);
   for (let i=0;i<itemsCount.length;i++){
-    printIfo.push(itemsCount[i].name + ' x ' + itemsCount[i].count + ' = ' + itemsCount[i].count * itemsCount[i].price+'元' );
+    printIfo.push(`${itemsCount[i].name} x ${itemsCount[i].count} = ${itemsCount[i].count * itemsCount[i].price}元` );
   }
   printIfo.push(`-----------------------------------`);
   if(discount_1 !== 0 && discount_2 !== 0){
     printIfo.push('使用优惠:');
-    printIfo.push(sum[0].type + '，省'+ sum[0].discount + '元');
+    printIfo.push(`${sum[0].type}，省${sum[0].discount}元`);
     printIfo.push(`-----------------------------------`);
   }
-  printIfo.push('总计：'+ sum[0].totalprice +'元');
+  printIfo.push(`总计：${sum[0].totalprice}元`);
   printIfo.push(`===================================`);
 
   for(let i=0;i<printIfo.length;i++){
